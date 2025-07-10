@@ -1,1 +1,16 @@
-/* место для вашего кода */
+/* Общие стили для блоков */
+/* Общие стили секций */
+.cover,
+.lots,
+.about {
+  margin-bottom: 20px;
+}
+
+.lots {
+  
+}
+
+.about {
+  display: flex;
+  justify-content: space-between;
+}
