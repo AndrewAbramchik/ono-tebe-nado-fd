@@ -1,74 +1,44 @@
-/* Глобальные стили */
-p {
-  margin: 0;
+/* Общие стили для блоков */
+*,
+*::before,
+*::after {
+box-sizing: border-box;
 }
-.header__links-list {
+body {
+width: 1100px;
+margin: 0 auto; font-family: Raleway, sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+P,
+ul, 
+ol, 
+li,
+blockquote {
+margin: 0; 
+padding: 0;
+}
+a {
+color: inherit;
+}
+img {
+width: 100%;
+}
+
+.about {
   display: flex;
-  gap: 33px;
-  list-style: circle;
-  font-size: 18px;
+  justify-content: space-between;
 }
-
-.header__links-list-item_no-bullit {
-  list-style: none;
-}
-
-.footer__menu-list {
-  text-align: center;
-  font-size: 18px;
-  list-style: none;
-  
-}
-
-.footer__social-list {
-  display: flex;
-  justify-self: end;
-  gap: 48px;
-  list-style: none;
-}
-.header__link {
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-
-.header__link_active {
-  text-decoration: none;
-}
-
-.footer__menu-link_active {
-  text-decoration: none;
-}
-.address {
-  font-style: normal;
-  font-size: 18px;
-  max-width: 239px;
-  line-height: 24px;
-}
-.overlay {
-  position: absolute;
-  inset: 0;
-  background-color: rgb(0, 0, 0, 0.6);
-  z-index: 1;
-}
-.text {
-  display: block;
-  margin-top: 20px;
-}
-
-.text_center {
-  text-align: center;
-  margin-right: -30px;
-}
-
-.text_right {
-  text-align: right;
-  margin-right: -30px;
-}
-.bet-button {
-  border: 1px solid #ffffff;
-  color: #ffffff;
-  font-size: 22px;
-  text-transform: uppercase;
-  background-color: transparent;
-  padding: 12px 31px;
+.header,
+.cover,
+.lots,
+.about,
+.footer {
+  width: 100%;
+  max-width: 1100px;
+  box-sizing: border-box;
 }
