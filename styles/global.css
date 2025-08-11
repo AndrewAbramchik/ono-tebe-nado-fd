@@ -6,7 +6,8 @@ box-sizing: border-box;
 }
 body {
 width: 1100px;
-margin: 0 auto; font-family: Raleway, sans-serif;
+margin: 0 auto; 
+font-family: 'Raleway', sans-serif;
 }
 h1,
 h2,
@@ -29,16 +30,3 @@ img {
 width: 100%;
 }
 
-.about {
-  display: flex;
-  justify-content: space-between;
-}
-.header,
-.cover,
-.lots,
-.about,
-.footer {
-  width: 100%;
-  max-width: 1100px;
-  box-sizing: border-box;
-}

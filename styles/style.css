@@ -29,20 +29,21 @@
 /* Адрес в шапке */
 .header__address {
   justify-self: end; /* Выравнивание по правому краю */
-   text-decoration: underline;
-  text-underline-offset: 4px; /* Расстояние от текста до линии */
   padding-bottom: 2px; /* Дополнительный отступ (опционально) */
 }
 .header__link_active {
   text-decoration: none; /* Убираем подчеркивание */
 }
-
+.header__links-list-item_no-bullit {
+  list-style: none; /* Убираем маркеры */
+}
 /* Общие стили адреса */
 .address {
   font-style: normal; /* Обычный стиль (не курсив) */
   font-size: 18px; /* Размер шрифта */
   max-width: 239px; /* Максимальная ширина */
   line-height: 24px; /* Межстрочный интервал */
+  text-underline-offset: 4px;
   text-decoration: none;
 }
 .address-menu {
@@ -56,9 +57,9 @@
   flex-direction: column; /* Вертикальное расположение */
   justify-content: space-between; /* Распределение пространства */
   width: 1100px; /* Фиксированная ширина */
-  height: 757px;
+  min-height: 757px;
   padding: 165px 50px 50px; /* Внутренние отступы */
-  background-position: center top; /* Позиция фона */
+  background-position: center; /* Позиция фона */
   background-size: cover; /* Заполнение фона */
   background-repeat: no-repeat; /* Без повторения */
   background-image: url(../images/cover.jpg); /* Фоновое изображение */
@@ -104,24 +105,20 @@
   z-index: 1; /* Уровень слоя */
 }
 .text_center {
-  text-align: center;
-  margin: 0 auto; /* Центрирование по горизонтали */
-  display: block; /* Чтобы margin: auto работал */
-  top: 20px;
-  left: 15px; /* Убираем предыдущее смещение */
-  right: 0; /* Добавляем выравнивание */
-  position: relative; /* Оставляем relative */
+  display: flex;
+  flex-direction: row;
+  padding: 20px 0px 0px 25px;
+  justify-content: center;
+  align-items: center; /* выравнивание по поперечной оси */
   transform: none; /* Убираем трансформацию если была */
-  width: fit-content; /* Ширина по содержимому */
+  
 }
 .text_right {
   text-align: right;
-  display: block;
+  display: flex;
   margin-left: auto;  /* Выталкивает блок вправо */
-  width: fit-content; /* Ширина по содержимому */
-  position: relative;
-  left: 30px;
-  top: 40px;
+  padding: 20px 0px 0px 100px;
+  margin-right: -30px;
 }
 
 /* Блок описания в обложке */
@@ -142,7 +139,7 @@
   font-size: 22px; /* Размер шрифта */
   text-transform: uppercase; /* Заглавные буквы */
   color: #ffffff; /* Белый цвет */
-  word-spacing: 20px; /* Расстояние между словами */
+  word-spacing: 18px; /* Расстояние между словами */
   line-height: 28px; /* Межстрочный интервал */
   z-index: 2;
 }
@@ -356,18 +353,13 @@
   width: 48px; /* Фиксированная ширина */
 }
 .footer__menu-link {
-  text-decoration: none; /* Убираем подчеркивание */
   color: inherit; /* Наследуем цвет текста */
   font-size: 18px; /* Размер шрифта как в макете */
   line-height: 1.2; /* Межстрочный интервал */
   display: inline-block; /* Для лучшего контроля */
   list-style: none;
 }
-
-/* Активная ссылка в меню подвала */
 .footer__menu-link_active {
-  text-decoration: none; /* Без подчеркивания */
+  text-decoration: none; /* Убираем подчеркивание */
 }
-.footer__menu-link-lots {
-  text-decoration: none;
-}
+
