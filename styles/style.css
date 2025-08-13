@@ -70,33 +70,17 @@
   position: relative; /* Для z-index */
   display: flex; /* Flex-контейнер */
   flex-direction: column; /* Вертикальное расположение */
+  z-index: 1; /* Над overlay */
+
+}
+.text {
   font-size: 100px; /* Очень большой шрифт */
   list-style: none; /* Без маркеров */
   font-style: normal; /* Обычное начертание */
   color: #ffffff; /* Белый цвет */
-  z-index: 1; /* Над overlay */
   letter-spacing: 30px; /* Большой межбуквенный интервал */
   line-height: 115%; /* Межстрочный интервал */
 }
-
-/* Базовый стиль для выравниваемого текста */
-.alignet-text {
-  display: block; /* Блочный элемент */
-  margin-top: 20px; /* Отступ сверху */
-}
-
-/* Центрированный текст */
-.alignet-text__center {
-  text-align: center; /* Выравнивание по центру */
-  margin-right: -30px; /* Компенсация letter-spacing */
-}
-
-/* Текст по правому краю */
-.alignet-text__right {
-  text-align: right; /* Выравнивание по правому краю */
-  margin-right: -30px; /* Компенсация letter-spacing */
-}
-
 /* Затемнение фона */
 .overlay {
   position: absolute; /* Абсолютное позиционирование */
@@ -105,43 +89,32 @@
   z-index: 1; /* Уровень слоя */
 }
 .text_center {
-  display: flex;
-  flex-direction: row;
   padding: 20px 0px 0px 25px;
-  justify-content: center;
-  align-items: center; /* выравнивание по поперечной оси */
-  transform: none; /* Убираем трансформацию если была */
-  
+  text-align: center;
 }
 .text_right {
   text-align: right;
-  display: flex;
-  margin-left: auto;  /* Выталкивает блок вправо */
   padding: 20px 0px 0px 100px;
   margin-right: -30px;
 }
 
 /* Блок описания в обложке */
-.cover__discription {
-  display: flex; /* Flex-контейнер */
-  position: relative; /* Для z-index */
-  justify-content: flex-end; /* Распределение пространства */
-  align-items: right; /* Выравнивание по центру */
-  z-index: 2; /* Уровень слоя */
-  margin-top: 106px; /* Отступ сверху */
+.cover__description {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 78px;
 }
 
 /* Текст описания */
 .cover__description-text {
-  position: relative;
-  top: 40px;
-  font-weight: 400; /* Обычное начертание */
   font-size: 22px; /* Размер шрифта */
   text-transform: uppercase; /* Заглавные буквы */
   color: #ffffff; /* Белый цвет */
   word-spacing: 18px; /* Расстояние между словами */
   line-height: 28px; /* Межстрочный интервал */
-  z-index: 2;
 }
 
 /* Кнопка ставки */
@@ -172,7 +145,6 @@
   color: #000000; /* черный цвет текста */
   margin: 0 0 27px 40px; /* отступы: сверху 0, справа 0, снизу 27px, слева 40px */
   padding: 0;
-  letter-spacing: 0.05em; /* межбуквенное расстояние */
   line-height: 1.2;
 }
 
@@ -246,7 +218,7 @@
 
 /* Ссылка "посмотреть больше" */
 .lots__look-more-link {
-  display: block; /* Блочный элемент */
+  display: inline-block; /* Блочный элемент */
   font-weight: 400; /* Обычное начертание */
   font-size: 20px; /* Размер шрифта */
   margin-top: 30px; /* Отступ сверху */
